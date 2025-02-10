@@ -19,72 +19,28 @@ return {
         end,
       },
       adapters = {
-        claude = function()
-          return require("codecompanion.adapters").extend("anthropic", {
+        azure_openai = function()
+          local s = require("codecompanion.adapters").extend("openai", {
+            url = "http://localhost:2000/?resource=af-openai-nc-prod&deployment=af-openainc-o1mini-prod&api_version=2024-08-01-preview",
             schema = {
               model = {
-                default = "claude-3-7-sonnet-latest",
+                default = "af-openainc-o1mini-prod",
               },
             },
-            env = {
-              api_key = vim.env.ANTHROPIC_API_KEY,
-            },
           })
-        end,
-        openai = function()
-          return require("codecompanion.adapters").extend("openai", {
-            schema = {
-              model = {
-                default = "o1-preview-2024-09-12",
-              },
-            },
-            env = {
-              api_key = vim.env.OPENAI_API_KEY,
-            },
-          })
-        end,
-        ollama = function()
-          return require("codecompanion.adapters").extend("ollama", {
-            name = "ollama",
-            schema = {
-              model = {
-                default = "deepseek-r1:14b",
-              },
-            },
-            env = {
-              url = "http://localhost:11434",
-            },
-            headers = {
-              ["Content-Type"] = "application/json",
-            },
-            parameters = {
-              sync = true,
-            },
-          })
-        end,
-        openai_mini = function()
-          return require("codecompanion.adapters").extend("openai", {
-            schema = {
-              model = {
-                default = "o1-mini-2024-09-12",
-              },
-            },
-            env = {
-              api_key = vim.env.OPENAI_API_KEY,
-            },
-          })
+          return s
         end,
       },
       strategies = {
         chat = {
-          adapter = "claude",
+          adapter = "azure_openai",
         },
       },
     }
   end,
   keys = {
-    { "<leader>a", "", desc = "AI Tools" },
-    { "<leader>a", "", mode = "v", desc = "AI Tools" },
+    { "<leader>a", "", desc = "Code Companion" },
+    { "<leader>a", "", mode = "v", desc = "Code Companion" },
     { "<leader>ac", function() vim.cmd "CodeCompanionChat" end, desc = "Start Chat" },
   },
 }
