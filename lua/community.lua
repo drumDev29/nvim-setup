@@ -12,5 +12,6 @@ return {
   { import = "astrocommunity.docker.lazydocker" },
   { import = "astrocommunity.fuzzy-finder.snacks-picker" },
   { import = "astrocommunity.pack.lua" },
-  { import = "astrocommunity.search.nvim-spectre" },
+  { import = "astrocommunity.search.grug-far-nvim" },
+  { import = "astrocommunity.utility.noice-nvim" },
 }
