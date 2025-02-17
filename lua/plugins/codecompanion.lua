@@ -20,11 +20,20 @@ return {
       },
       adapters = {
         azure_openai = function()
+          local resource = "af-openai-nc-prod"
+          local model = "af-openainc-o1mini-prod"
+          local api_version = "2024-08-01-preview"
+
           local s = require("codecompanion.adapters").extend("openai", {
-            url = "http://localhost:2000/?resource=af-openai-nc-prod&deployment=af-openainc-o1mini-prod&api_version=2024-08-01-preview",
+            url = "http://localhost:2000/?resource="
+              .. resource
+              .. "&deployment="
+              .. model
+              .. "&api_version="
+              .. api_version,
             schema = {
               model = {
-                default = "af-openainc-o1mini-prod",
+                default = model,
               },
             },
           })
