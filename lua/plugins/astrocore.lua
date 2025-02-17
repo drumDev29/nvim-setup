@@ -55,6 +55,6 @@ return {
     },
   },
   require("toggleterm").setup {
-    shell = "powershell.exe",
+    shell = "pwsh.exe",
   },
 }
