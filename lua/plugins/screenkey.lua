@@ -1,3 +1,4 @@
+if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 return {
   "NStefan002/screenkey.nvim",
   lazy = false,
@@ -5,8 +6,6 @@ return {
   config = function()
     require("screenkey").setup {
       win_opts = {
-        -- row = vim.o.lines - vim.o.cmdheight - 1,
-        -- col = vim.o.columns - 1,
         row = vim.o.lines - vim.o.cmdheight - 1,
         col = 0,
         relative = "editor",
