@@ -25,12 +25,13 @@ return {
           local api_version = "2024-08-01-preview"
 
           local s = require("codecompanion.adapters").extend("openai", {
-            url = "http://localhost:2000/?resource="
-              .. resource
-              .. "&deployment="
-              .. model
-              .. "&api_version="
-              .. api_version,
+            url = "http://localhost:2000/",
+            -- /?resource="
+            --   .. resource
+            --   .. "&deployment="
+            --   .. model
+            --   .. "&api_version="
+            --   .. api_version,
             schema = {
               model = {
                 default = model,
