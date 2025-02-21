@@ -1,0 +1,19 @@
+services:
+  nvim:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/workspace
+      - nvim-data:/root/.local/share/nvim
+      - C:\\Users\\kyle1\\.gitconfig:/root/.gitconfig
+      - C:\\Users\\kyle1\\.ssh:/root/.ssh
+      - C:\\Users\\kyle1\\AppData\\Local\\nvim:/root/.config/nvim
+    environment:
+      - TERM=xterm-256color
+      - COLORTERM=truecolor
+    stdin_open: true
+    tty: true
+
+volumes:
+  nvim-data:
