@@ -48,3 +48,22 @@ function cdh {
 function kill-all {
     Get-Process -Name node,powershell | Stop-Process
 }
+
+function nv {
+    # Get current PowerShell directory and convert to WSL path
+    $wslWorkingDir = wsl wslpath -a "$(Get-Location)"
+    
+    # Process arguments and convert Windows paths to WSL paths
+    $wslArgs = @()
+    foreach ($arg in $args) {
+        # Convert absolute Windows paths, leave relative paths and options untouched
+        if ($arg -match '^[a-zA-Z]:\\') {
+            $wslArgs += (wsl wslpath -a "$arg")
+        } else {
+            $wslArgs += $arg
+        }
+    }
+    
+    # Launch Neovim in WSL with proper working directory and arguments
+    wsl --cd "$wslWorkingDir" nvim $wslArgs
+}
