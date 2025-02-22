@@ -28,3 +28,4 @@ tags
 *.sublime-workspace
 *.vscode/settings.json
 *.vscode/extensions/*
+.aider*
