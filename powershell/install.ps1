@@ -8,6 +8,7 @@ scoop install python
 scoop install nvm
 nvm install lts 
 scoop install gcc
+scoop install win32yank 
 # scoop install ollama
 #
 # ollama pull deepseek-r1:14b
