@@ -1,42 +1,17 @@
-# AstroNvim Template
+# 🚀 My AstroNvim Configuration
 
-**NOTE:** This is for AstroNvim v4+
+My personalized Neovim configuration built on top of [AstroNvim](https://github.com/AstroNvim/AstroNvim). 
 
-A template for getting started with [AstroNvim](https://github.com/AstroNvim/AstroNvim)
+## ✨ Features
 
-## 🛠️ Installation
+- 📝 Enhanced LSP configuration with Mason
+- 🎨 Custom UI improvements with Heirline
+- 🌈 Indent guides with rainbow colors
+- 🔍 Advanced fuzzy finding with Flash.nvim
+- 📊 LeetCode integration for coding practice
+- 📑 Markdown preview with Markview
+- 🎯 Mini.files for file navigation
+- 🔄 Enhanced surrounding with nvim-surround
+- 🌲 Advanced syntax highlighting with Treesitter
 
-#### Make a backup of your current nvim and shared folder
 
-```shell
-mv ~/.config/nvim ~/.config/nvim.bak
-mv ~/.local/share/nvim ~/.local/share/nvim.bak
-mv ~/.local/state/nvim ~/.local/state/nvim.bak
-mv ~/.cache/nvim ~/.cache/nvim.bak
-```
-
-#### Create a new user repository from this template
-
-Press the "Use this template" button above to create a new repository to store your user configuration.
-
-You can also just clone this repository directly if you do not want to track your user configuration in GitHub.
-
-#### Clone the repository
-
-```shell
-git clone https://github.com/<your_user>/<your_repository> ~/.config/nvim
-```
-
-#### Start Neovim
-
-```shell
-nvim
-```
-
-```
-#### Start Neovim
-```
-
-```
-
-```
