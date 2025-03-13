@@ -1,6 +1,6 @@
 return {
   "rebelot/heirline.nvim",
-  dependencies = { "NStefan002/screenkey.nvim" },
+  -- dependencies = { "NStefan002/screenkey.nvim" },
   opts = function(_, opts)
     vim.g.screenkey_statusline_component = true
     local status = require "astroui.status"
@@ -13,11 +13,11 @@ return {
       status.component.file_info(),
       status.component.git_diff(),
       status.component.diagnostics(),
-      status.component.builder {
-        { provider = function() return require("screenkey").get_keys() end },
-        padding = { right = 1, left = 1 },
-        surround = { separator = "left" },
-      },
+      -- status.component.builder {
+      --   { provider = function() return require("screenkey").get_keys() end },
+      --   padding = { right = 1, left = 1 },
+      --   surround = { separator = "left" },
+      -- },
       status.component.fill(),
       status.component.cmd_info(),
       status.component.fill(),
