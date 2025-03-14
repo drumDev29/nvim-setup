@@ -13,6 +13,12 @@ return {
               end,
               desc = "Explorer",
             },
+            ["<Leader>E"] = {
+              function()
+                if not require("mini.files").close() then require("mini.files").open(vim.api.nvim_buf_get_name(0)) end
+              end,
+              desc = "Explorer (current file)",
+            },
           },
         },
       },
@@ -20,16 +26,10 @@ return {
   },
   specs = {
     { "neo-tree.nvim", optional = true, enabled = false },
-    {
-      "catppuccin",
-      optional = true,
-      ---@type CatppuccinOptions
-      opts = { integrations = { mini = true } },
-    },
   },
   opts = {
     mappings = {
-      -- synchronize = "s",
+      synchronize = "<C-s>",
     },
     windows = {
       -- Maximum number of windows to show side by side
