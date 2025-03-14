@@ -7,9 +7,6 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.color.nvim-highlight-colors" },
-  { import = "astrocommunity.colorscheme.onedarkpro-nvim" },
-  { import = "astrocommunity.colorscheme.catppuccin" },
-  { import = "astrocommunity.colorscheme.tokyodark-nvim" },
   { import = "astrocommunity.colorscheme.tokyonight-nvim" },
   { import = "astrocommunity.docker.lazydocker" },
   { import = "astrocommunity.editing-support.auto-save-nvim" },
