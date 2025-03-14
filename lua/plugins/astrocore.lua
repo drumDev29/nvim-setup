@@ -17,9 +17,7 @@ return {
           end,
           desc = "Select buffer from tabline",
         },
-        ["d"] = { '"_d', desc = "Delete without yanking" },
-        ["D"] = { '"_D', desc = "Delete line without yanking" },
-        ["dd"] = { '"_dd', desc = "Delete line without yanking" },
+        ["<C-p>"] = { '"0p', desc = "Paste from yank register" },
       },
       t = {
         ["<C-t>"] = { "<Cmd>ToggleTerm<CR>", desc = "Toggle terminal" },
@@ -29,8 +27,7 @@ return {
       },
       v = {
         ["<C-t>"] = { "<Esc><Cmd>ToggleTerm<CR>", desc = "Toggle terminal" },
-        ["d"] = { '"_d', desc = "Delete without yanking" },
-        ["D"] = { '"_D', desc = "Delete without yanking" },
+        ["<C-p>"] = { '"0p', desc = "Paste from yank register" },
       },
     },
     sessions = {
