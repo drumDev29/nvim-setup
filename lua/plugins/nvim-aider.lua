@@ -40,7 +40,7 @@ return {
       aider_cmd = "aider",
       -- Command line arguments passed to aider
       args = {
-        "--watch",
+        -- "--watch",
         "--architect",
         "--no-auto-commits",
         "--pretty",
@@ -70,7 +70,7 @@ return {
       win = {
         wo = { winbar = "Aider" },
         style = "nvim_aider",
-        position = "bottom",
+        position = "right",   -- Changed from "bottom" to "right"
       },
     }
   end,
