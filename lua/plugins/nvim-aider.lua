@@ -8,23 +8,12 @@ return {
     { "<leader>ai", "<cmd>AiderTerminalToggle<cr>", desc = "Open Aider" },
     { "<leader>as", "<cmd>AiderTerminalSend<cr>", desc = "Send to Aider", mode = { "n", "v" } },
     { "<leader>ae", "<cmd>AiderQuickSendCommand<cr>", desc = "Send Command To Aider" },
-    { "<leader>ab", "<cmd>AiderQuickSendBuffer<cr>", desc = "Send Buffer To Aider" },
-    { "<leader>aa", "<cmd>AiderQuickAddFile<cr>", desc = "Add File to Aider" },
-    { "<leader>ad", "<cmd>AiderQuickDropFile<cr>", desc = "Drop File from Aider" },
+    { "<leader>ab", "<cmd>AiderQuickAddFile<cr>", desc = "Add Buffer to Aider" },
+    { "<leader>ad", "<cmd>AiderQuickDropFile<cr>", desc = "Drop Buffer from Aider" },
     { "<leader>ar", "<cmd>AiderQuickReadOnlyFile<cr>", desc = "Add File as Read-Only" },
   },
   dependencies = {
     "folke/snacks.nvim",
-    --- The below dependencies are optional
-    "catppuccin/nvim",
-    "nvim-tree/nvim-tree.lua",
-    --- Neo-tree integration
-    {
-      "nvim-neo-tree/neo-tree.nvim",
-      opts = function(_, opts)
-        require("nvim_aider.neo_tree").setup(opts)
-      end,
-    },
   },
   config = true,
   opts = function()
@@ -33,11 +22,11 @@ return {
       aider_cmd = "aider",
       -- Command line arguments passed to aider
       args = {
-        "--watch",
         "--architect",
         "--no-auto-commits",
         "--pretty",
-        "--stream",
+        "--no-stream",
+        "--cache-prompts",
       },
       -- Theme colors (automatically uses Catppuccin flavor if available)
       theme = {
