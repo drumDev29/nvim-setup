@@ -1,7 +1,6 @@
 return {
   "echasnovski/mini.files",
   dependencies = {
-    "nvim-tree/nvim-web-devicons",
     {
       "AstroNvim/astrocore",
       opts = {
