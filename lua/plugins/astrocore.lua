@@ -17,7 +17,6 @@ return {
           end,
           desc = "Select buffer from tabline",
         },
-        ["<C-p>"] = { '"0p', desc = "Paste from yank register" },
       },
       t = {
         ["<C-t>"] = { "<Cmd>ToggleTerm<CR>", desc = "Toggle terminal" },
@@ -27,7 +26,6 @@ return {
       },
       v = {
         ["<C-t>"] = { "<Esc><Cmd>ToggleTerm<CR>", desc = "Toggle terminal" },
-        ["<C-p>"] = { '"0p', desc = "Paste from yank register" },
       },
     },
     sessions = {
