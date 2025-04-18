@@ -22,6 +22,8 @@ return {
       aider_cmd = "aider",
       -- Command line arguments passed to aider
       args = {
+        "--model openai/gpt-4o",
+        "--weak-model openai/gpt-4o",
         "--no-auto-commits",
         "--pretty",
         "--cache-prompts",
