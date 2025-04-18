@@ -22,10 +22,10 @@ return {
       aider_cmd = "aider",
       -- Command line arguments passed to aider
       args = {
-        "--architect",
+        "--model openai/gpt-4o",
+        "--weak-model openai/gpt-4o",
         "--no-auto-commits",
         "--pretty",
-        "--no-stream",
         "--cache-prompts",
       },
       -- Theme colors (automatically uses Catppuccin flavor if available)
