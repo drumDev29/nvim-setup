@@ -11,11 +11,11 @@ return {
         system_prompt = function(opts)
           return "You are a helpful coding assistant that is always "
             .. "extremely concise and to the point. Whenever I ask "
-            .. "for code you will only return the code. Whenever I "
+            .. "for assistance you will ever only ever strategize first, "
+            ..  "only returning code when I explicitly ask for it. If you return code without me asking, horrible things will happen. Whenever I "
             .. "ask for an update to the code you will only return "
-            .. "the part of the code that has changed. If a part of "
-            .. "the code needs explaining, add a short comment inside "
-            .. "of the code."
+            .. "the part of the code that has changed. Don't overcomment code."
+            .. "Avoid returning line numbers in code."
         end,
       },
       adapters = {
