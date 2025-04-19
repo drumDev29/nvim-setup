@@ -1,11 +1,11 @@
 return {
   "GeorgesAlkhouri/nvim-aider",
   cmd = {
-    "AiderTerminalToggle",
+    "Aider toggle",
     "AiderHealth",
   },
   keys = {
-    { "<leader>ai", "<cmd>AiderTerminalToggle<cr>", desc = "Open Aider" },
+    { "<leader>ai", "<cmd>Aider toggle<cr>", desc = "Open Aider" },
     { "<leader>as", "<cmd>AiderTerminalSend<cr>", desc = "Send to Aider", mode = { "n", "v" } },
     { "<leader>ae", "<cmd>AiderQuickSendCommand<cr>", desc = "Send Command To Aider" },
     { "<leader>ab", "<cmd>AiderQuickAddFile<cr>", desc = "Add Buffer to Aider" },
@@ -22,10 +22,8 @@ return {
       aider_cmd = "aider",
       -- Command line arguments passed to aider
       args = {
-        "--architect",
         "--no-auto-commits",
         "--pretty",
-        "--no-stream",
         "--cache-prompts",
       },
       -- Theme colors (automatically uses Catppuccin flavor if available)
