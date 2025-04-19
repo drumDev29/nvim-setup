@@ -1,0 +1,15 @@
+[core]
+	autocrlf = true
+	editor = nvim
+[credential]
+	helper = "/mnt/c/Program Files/Git/mingw64/bin/git-credential-manager.exe"
+[user]
+	email = kyle1324@hotmail.com
+	name = Kyle Taylor
+[alias]
+	st = status
+	cia = commit -am
+	ci = commit -m
+	cob = checkout -b
+[push]
+	default = current
