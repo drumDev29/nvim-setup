@@ -11,5 +11,6 @@
 	cia = commit -am
 	ci = commit -m
 	cob = checkout -b
+  up = !git stash && git pull --rebase --prune && git stash pop 
 [push]
 	default = current
