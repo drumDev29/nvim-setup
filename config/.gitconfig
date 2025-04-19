@@ -2,7 +2,7 @@
 	autocrlf = true
 	editor = nvim
 [credential]
-	helper = "/mnt/c/Program Files/Git/mingw64/bin/git-credential-manager.exe"
+	helper = "/mnt/c/'Program Files'/Git/mingw64/bin/git-credential-manager.exe"
 [user]
 	email = kyle1324@hotmail.com
 	name = Kyle Taylor
