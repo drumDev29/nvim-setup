@@ -41,7 +41,7 @@ return {
           padding = 1,
           ttl = 0,
         },
-        -- { section = "startup" },
+        { section = "startup" },
       },
     }
   end,
