@@ -1,5 +1,6 @@
 os:
-  editCommand: 'nvim'
-  edit: 'nvim {{filename}}'
-  editAtLine: 'nvim +{{line}} {{filename}}'
-
+  editCommand: "nvim"
+  edit: "nvim {{filename}}"
+  editAtLine: "nvim +{{line}} {{filename}}"
+gui:
+  switchTabsWithPanelJumpKeys: true
