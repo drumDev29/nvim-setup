@@ -13,6 +13,8 @@ return {
     }
   end,
   keys = {
-    { "<leader>r", ":'<,'>SnipRun<CR>", mode = { "v" }, desc = "SnipRun" },
+
+    { "<leader>r", ":%SnipRun<CR>", mode = { "n" }, desc = "SnipRun buffer" },
+    { "<leader>r", ":'<,'>SnipRun<CR>", mode = { "v" }, desc = "SnipRun selection" },
   },
 }
