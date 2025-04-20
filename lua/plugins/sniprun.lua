@@ -5,6 +5,7 @@ return {
   -- build = "bash ./install.sh 1",
   config = function()
     require("sniprun").setup {
+      selected_interpreters = {"Lua_nvim"},
       interpreter_options = {
         TypeScript_original = {
           interpreter = "node",
