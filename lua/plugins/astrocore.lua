@@ -29,4 +29,7 @@ return {
       },
     },
   },
+  specs = {
+    { "telescope.nvim", optional = true, enabled = false },
+  }
 }

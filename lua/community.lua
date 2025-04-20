@@ -9,7 +9,6 @@ return {
   { import = "astrocommunity.colorscheme.tokyonight-nvim" },
   { import = "astrocommunity.docker.lazydocker" },
   { import = "astrocommunity.editing-support.auto-save-nvim" },
-  { import = "astrocommunity.fuzzy-finder.snacks-picker" },
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.search.grug-far-nvim" },
   { import = "astrocommunity.utility.noice-nvim" },
