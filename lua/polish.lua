@@ -1,18 +1,12 @@
-if true then return end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
--- This will run last in the setup process and is a good place to configure
--- things like custom filetypes. This is just pure lua so anything that doesn't
--- fit in the normal config locations above can go here
-
--- Set up custom filetypes
-vim.filetype.add {
-  extension = {
-    foo = "fooscript",
+vim.g.clipboard = {
+  name = 'WslClipboard',
+  copy = {
+    ['+'] = '/mnt/c/Windows/System32/clip.exe',
+    ['*'] = '/mnt/c/Windows/System32/clip.exe',
   },
-  filename = {
-    ["Foofile"] = "fooscript",
+  paste = {
+    ['+'] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+    ['*'] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
   },
-  pattern = {
-    ["~/%.config/foo/.*"] = "fooscript",
-  },
+  cache_enabled = 0,
 }
