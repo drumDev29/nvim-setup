@@ -1,6 +1,42 @@
+customCommands:  
+  - key: 'c'  
+    context: 'submodules'  
+    prompts:  
+      - type: 'menu'  
+        title: 'Select the branch to check out in all submodules:'  
+        key: 'SubmoduleBranch'  
+        options:  
+          - name: 'develop'  
+            description: 'The develop branch'  
+            value: 'develop'  
+          - name: 'main'  
+            description: 'The main branch'  
+            value: 'main'  
+    command: "git submodule foreach --recursive 'git checkout {{.Form.SubmoduleBranch | quote}}'"  
+    description: 'Check out all submodules to a specified branch'  
+    loadingText: 'Checking out submodules'  
+  
+  - key: 'p'  
+    context: 'submodules'  
+    prompts:  
+      - type: 'menu'  
+        title: 'Select the remote branch to pull in all submodules:'  
+        key: 'SubmoduleBranch'  
+        options:  
+          - name: 'origin/develop'  
+            description: 'The develop branch on origin'  
+            value: 'develop'  
+          - name: 'origin/main'  
+            description: 'The main branch on origin'  
+            value: 'main'  
+    command: "git submodule foreach --recursive 'git pull origin {{.Form.SubmoduleBranch | quote}}'"  
+    description: 'Pull all submodules from a specified branch'  
+    loadingText: 'Pulling submodules'  
+git:
+  log:
+    order: default
 os:
-  editCommand: "nvim"
-  edit: "nvim {{filename}}"
-  editAtLine: "nvim +{{line}} {{filename}}"
+  editPreset: 'nvim'
 gui:
+  # If true, when using the panel jump keys (default 1 through 5) and target panel is already active, go to next tab instead
   switchTabsWithPanelJumpKeys: true
