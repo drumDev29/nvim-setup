@@ -1,14 +1,13 @@
-
 app_version: 0.4.0-windows_beta.2
 behavior_configs:
-- base_move_speed: 4
+- base_move_speed: 5.0
   base_wheel_speed: 0.3
-  free_mode_auto_off_s: 10
+  free_mode_auto_off_s: 0
   grid_action_level: subgrid
   hide_cursor_on_click: false
   hide_location: bottom_left
   initial_action_location: system_cursor
-  initial_overlay_monitor: with_keyboard_focus
+  initial_overlay_monitor: with_mouse
   move_duration_ms: 100
   move_real_cursor_with_virtual: true
   move_speed_multiplier: 3.0
@@ -30,27 +29,27 @@ grid_configs:
   grid_defn:
   - border_width: 0.0
     callback: build_cell_strings
-    keys: ABCDEFGHIJKLMNOPQRSTUVWXYZ
-    num_cells_x: 26
+    keys: ASDFG HJKL;
+    num_cells_x: 10
     num_cells_y: 1
   - border_width: 1.0
     callback: build_cell_strings
-    keys: ''
+    keys: QWERT YUIOP ASDFG HJKL; ZXCVB NM,./
     num_cells_x: 1
-    num_cells_y: 26
+    num_cells_y: 30
   - border_width: 0.0
     callback: apply_strings_and_subgrid_to_cells
     keys: ''
     num_cells_x: 2
     num_cells_y: 1
   hold_subgrid_key_for_nudge: false
-  name: column_row
+  name: position_based_columns
   nudges_per_cell: 4
   strategy: subgrid
   subgrid_dims:
-  - 8
+  - 10
   - 3
-  subgrid_mouse_action_keys: QWER UIOP ASDF JKL; ZXCV M,./
+  subgrid_mouse_action_keys: QWERT YUIOP ASDFG HJKL; ZXCVB NM,./
 keyboard_layout: null
 keymaps:
 - entries:
@@ -112,8 +111,8 @@ keymaps:
     - I
     switch monitor left: ShiftLeft tap
     switch monitor right: ShiftRight tap
-    toggle continuous mode: null
-    toggle continuous mode until closed: '1'
+    toggle continuous mode: '1'
+    toggle continuous mode until closed: null
     toggle free mode: null
     toggle overlay: null
     toggle overlay lock: null
@@ -139,22 +138,22 @@ monitor_assignment_mode: auto
 name: ''
 style_configs:
 - always_on_subgrid_rgba:
-  - 1
-  - 1
-  - 1
+  - 1.0
+  - 1.0
+  - 1.0
   - 0.2
   background_rgba:
-  - 0.996078431372549
-  - 0.996078431372549
-  - 0.9921568627450981
-  - 0
+  - 0.5725490196078431
+  - 0.5725490196078431
+  - 0.5725490196078431
+  - 0.4
   char_spacing_cell_width_ratio: 0.5
   char_spacing_font_size_ratio: 0.5
   char_spacing_strategy: cell_width_relative
   cursor_drag_rgba:
-  - 0
+  - 0.0
   - 0.5
-  - 1
+  - 1.0
   - 0.7
   cursor_move_rgba:
   - 0.75
@@ -162,9 +161,9 @@ style_configs:
   - 0.92
   - 0.7
   cursor_other_rgba:
-  - 1
-  - 1
-  - 1
+  - 1.0
+  - 1.0
+  - 1.0
   - 0.7
   cursor_rgba:
   - 0.4588235294117647
@@ -177,7 +176,7 @@ style_configs:
   - 0.32
   - 0.7
   cursor_size: 7
-  font_family: 0xProto Nerd Font
+  font_family: Bahnschrift Condensed
   font_size_multiplier: 0.4
   font_weight: 500
   grid_line_style: lines
@@ -188,10 +187,10 @@ style_configs:
   - 0.5
   highlight_animation_ms: 0
   highlight_rgba:
-  - 0.21
-  - 0.48
-  - 0.95
-  - 0
+  - 0.0
+  - 0.00392156862745098
+  - 0.00392156862745098
+  - 0.4
   name: default
   show_initial_highlight: false
   subgrid_font_size_multiplier: 0.75
@@ -201,23 +200,23 @@ style_configs:
   - 0.611764705882353
   - 0.5
   subgrid_text_rgba:
-  - 1
-  - 1
-  - 1
-  - 0.5
+  - 0.996078431372549
+  - 0.996078431372549
+  - 0.9921568627450981
+  - 1.0
   text_rgba:
   - 0.996078431372549
   - 0.9921568627450981
   - 0.9921568627450981
-  - 1
+  - 1.0
   text_shadow_blur_radius: 2.0
   text_shadow_offset:
   - 0.0
   - 0.0
   text_shadow_rgba:
-  - 0.050980392156862744
-  - 0.050980392156862744
-  - 0
-  - 1
+  - 0.0392156862745098
+  - 0.0392156862745098
+  - 0.0
+  - 1.0
   text_y_offset: 0.0
-  window_opacity: 1.0
+  window_opacity: 1.0 window_opacity: 1.0
