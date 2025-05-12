@@ -29,8 +29,8 @@ grid_configs:
   grid_defn:
   - border_width: 0.0
     callback: build_cell_strings
-    keys: ASDFG HJKL;
-    num_cells_x: 10
+    keys: ASDF JKL;
+    num_cells_x: 8
     num_cells_y: 1
   - border_width: 1.0
     callback: build_cell_strings
@@ -176,7 +176,7 @@ style_configs:
   - 0.32
   - 0.7
   cursor_size: 7
-  font_family: Bahnschrift Condensed
+  font_family: 0xProto Nerd Font
   font_size_multiplier: 0.4
   font_weight: 500
   grid_line_style: lines
@@ -219,4 +219,4 @@ style_configs:
   - 0.0
   - 1.0
   text_y_offset: 0.0
-  window_opacity: 1.0 window_opacity: 1.0
+  window_opacity: 1.0
